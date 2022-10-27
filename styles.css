@@ -1,0 +1,126 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+
+  height: 100%;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 190px;
+
+  margin-left: 5px;
+
+  color: #de2424;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.subtitle {
+  margin-top: -1%;
+  margin-height: 33px;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 33px;
+
+  color: #1e1e1e;
+
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+
+.container {
+  width: 500px;
+  margin: 30px auto;
+}
+.form {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  font-weight: 600;
+
+  color: #1e1e1e;
+}
+
+input[type="text"] {
+  padding: 5px;
+  background-color: #d9d9d9;
+  border: 0px solid #f6f6f6;
+  border-radius: 2px;
+
+  input[type="text"]:focus {
+    border: 1px solid #de2424;
+  }
+}
+
+.add {
+  font-size: 15px;
+  border: none;
+  background-color: #de2424;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 6px;
+  margin-left: 5px;
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+.read {
+  font-weight: 600;
+  color: #1e1e1e;
+
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.Radio {
+  display: inline-flex;
+  align-items: center;
+}
+
+.Radio--large {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.Radio-Input {
+  margin: 0 8px 0;
+}
+​ .radio-item input[type="radio"]:checked + label:after {
+  border-radius: 11px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: " ";
+  display: block;
+  background: #de2424;
+}
+
+.star {
+  /* Star */
+
+  margin-top: 100px;
+  margin-left: 500px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
