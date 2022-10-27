@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://www.flaticon.com/br/icones-gratis/e-book" />
+
+    <link
+      href="https: //fonts.googleapis.com/css2? família= Inter:wght@400;600;700 & display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>My Books</title>
+    <meta name="description" content="List of books. The your book list!" />
+  </head>
+
+  <body>
+    <img src="img/Star.svg" alt="red star" class="star" />
+
+    <div class="container">
+      <div class="title">
+        <h1>My Books</h1>
+      </div>
+
+      <div class="subtitle">
+        <h2>add book</h2>
+      </div>
+
+      <form class="form">
+        <div class="field-group">
+          <label for="bookname">Book</label>
+          <input type="text" name="bookname" required />
+        </div>
+
+        <div class="field-group">
+          <label for="authorname">Author</label>
+          <input type="text" name="authorname" required />
+        </div>
+
+        <label for="checkname" class="read">Read</label>
+
+        <div>
+          <label class="Radio" for="yes">
+            <input
+              class="Radio-Input"
+              type="radio"
+              id="yes-option"
+              name="read"
+              value="y"
+            />
+            Yes
+          </label>
+
+          <label class="Radio" for="no">
+            <input
+              class="Radio-Input"
+              type="radio"
+              id="no-option"
+              name="read"
+              value="n"
+              checked
+            />
+            No
+          </label>
+        </div>
+
+        <input type="submit" class="add" value="send book" />
+      </form>
+    </div>
+  </body>
+</html>
