@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <img src="img/Star.svg" alt="red star" class="star" />
+    <img src="images/Star.svg" alt="red star" class="star" />
 
     <div class="container">
       <div class="title">
@@ -32,25 +32,25 @@
         <h2>add book</h2>
       </div>
 
-      <form class="form">
+      <form class="form" onsubmit="return submitForm(event)">
         <div class="field-group">
           <label for="bookname">Book</label>
-          <input type="text" name="bookname" required />
+          <input type="text" id="bookname" name="bookname" required />
         </div>
 
         <div class="field-group">
           <label for="authorname">Author</label>
-          <input type="text" name="authorname" required />
+          <input type="text" id="authorname" name="authorname" required />
         </div>
 
-        <label for="checkname" class="read">Read</label>
+        <label class="read">Read</label>
 
         <div>
           <label class="Radio" for="yes">
             <input
               class="Radio-Input"
               type="radio"
-              id="yes-option"
+              id="yes"
               name="read"
               value="y"
             />
@@ -61,7 +61,7 @@
             <input
               class="Radio-Input"
               type="radio"
-              id="no-option"
+              id="no"
               name="read"
               value="n"
               checked
@@ -72,6 +72,67 @@
 
         <input type="submit" class="add" value="send book" />
       </form>
+      <div id="list"></div>
+      <script>
+        let listBooks = [];
+        let listAuthors = [];
+        let listReadOption = [];
+
+        /*listBooks.push("Milani");
+        listBooks.push("Outro nome");
+        listBooks.push("Lucas");
+        listBooks.splice(0,1)
+
+        console.log(listBooks);
+        console.log(listBooks[0]);*/
+
+        function renderBookList() {
+          let listDiv = document.getElementById("list");
+
+          listDiv.innerHTML = "";
+
+          let tamanhoLista = listBooks.length;
+          for (let index = 0; index < tamanhoLista; index++) {
+            console.log(listBooks[index] + " - " + listAuthors[index]);
+            listDiv.append(
+              listBooks[index] + " - " + listAuthors[index] + "\n"
+            );
+            listDiv.innerHTML += "<hr/>";
+          }
+          //listDiv.append(listBooks, listAuthors);
+        }
+
+        function submitForm(event) {
+          event.preventDefault();
+
+          let bookNameInput = document.getElementById("bookname");
+
+          let authornameInput = document.getElementById("authorname");
+
+          let readRadios = document.getElementsByName("read");
+
+          listBooks.push(bookNameInput.value);
+          console.log(listBooks);
+
+          listAuthors.push(authornameInput.value);
+          console.log(listAuthors);
+
+          //TODO: usar forEach p/ identificar qual opção foi selecionada
+          //TODO: Colocar o valor da opção selecionada no array (listReadOption)
+          //TODO: mostrar a opção selecionada dentro do renderBookList
+          readRadios.forEach;
+
+          /*console.log(readRadio.checked);
+           console.log(bookNameInput.value);
+          console.log(authornameInput.value); */
+
+          //limpa o input após o envio
+          bookNameInput.value = "";
+          authornameInput.value = "";
+          //mostra o valor após envio
+          renderBookList();
+        }
+      </script>
     </div>
   </body>
 </html>
