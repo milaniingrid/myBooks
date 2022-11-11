@@ -52,7 +52,7 @@
               type="radio"
               id="yes"
               name="read"
-              value="y"
+              value="read"
             />
             Yes
           </label>
@@ -63,7 +63,7 @@
               type="radio"
               id="no"
               name="read"
-              value="n"
+              value="not read"
               checked
             />
             No
@@ -91,15 +91,29 @@
 
           listDiv.innerHTML = "";
 
+          let els = document.getElementsByName("read");
+          for (let index = 0; index < els.length; index++) {
+            if (els[index].checked) {
+              listReadOption.push(els[index].value);
+            }
+          }
+
           let tamanhoLista = listBooks.length;
           for (let index = 0; index < tamanhoLista; index++) {
             console.log(listBooks[index] + " - " + listAuthors[index]);
             listDiv.append(
-              listBooks[index] + " - " + listAuthors[index] + "\n"
+              listBooks[index] + ", " + listAuthors[index] + " - " + listReadOption[index] + "\n"
             );
+
             listDiv.innerHTML += "<hr/>";
           }
           //listDiv.append(listBooks, listAuthors);
+
+          //abre um alert com o button selecionado
+          /* var seg = document.querySelector("input[name=read]:checked").value;
+          alert(seg); */
+          /*           alert(document.querySelector('input[name=read]:checked').value)
+           */
         }
 
         function submitForm(event) {
@@ -120,7 +134,8 @@
           //TODO: usar forEach p/ identificar qual opção foi selecionada
           //TODO: Colocar o valor da opção selecionada no array (listReadOption)
           //TODO: mostrar a opção selecionada dentro do renderBookList
-          readRadios.forEach;
+
+          //readRadios.forEach
 
           /*console.log(readRadio.checked);
            console.log(bookNameInput.value);
