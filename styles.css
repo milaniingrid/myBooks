@@ -9,9 +9,6 @@ body {
   font-weight: 700;
   font-size: 40px;
   line-height: 190px;
-
-  margin-left: 5px;
-
   color: #de2424;
 
   /* Inside auto layout */
@@ -24,7 +21,6 @@ body {
 .subtitle {
   margin-top: -1%;
   margin-height: 33px;
-  margin-left: 10px;
   font-weight: 600;
   font-size: 25px;
   line-height: 33px;
@@ -41,7 +37,7 @@ body {
   margin: 30px auto;
 }
 .form {
-  padding: 15px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   border-radius: 6px;
@@ -52,7 +48,6 @@ body {
   flex-direction: column;
   padding-bottom: 20px;
   font-weight: 600;
-
   color: #1e1e1e;
 }
 
@@ -70,13 +65,20 @@ input[type="text"] {
 .add {
   font-size: 15px;
   border: none;
+  border-radius: 200% 5% 20% 5%/5% 20%;
   background-color: #de2424;
   color: #ffffff;
   padding: 5px;
-  border-radius: 6px;
-  margin-left: 5px;
   margin-top: 15px;
   font-weight: 700;
+
+  /*   .heading__title {
+    transform: rotate(2deg);
+    padding: 0.2rem 1.2rem;
+    border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+    background-color: hsla(166, 100%, 50%, 0.7);
+    font-size: 1.5rem;
+  } */
 }
 
 .read {
@@ -123,4 +125,10 @@ input[type="text"] {
   flex: none;
   order: 0;
   flex-grow: 0;
+}
+
+hr {
+  margin: 6px;
+  border: 0;
+  border-top: 1px solid #d9d9d9;
 }
