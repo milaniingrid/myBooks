@@ -5,6 +5,19 @@ body {
   height: 100%;
 }
 
+.star {
+  /* Star */
+
+  margin-top: 100px;
+  margin-left: 500px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 .title {
   font-weight: 700;
   font-size: 40px;
@@ -70,6 +83,7 @@ input[type="text"] {
   color: #ffffff;
   padding: 5px;
   margin-top: 15px;
+  margin-bottom: 20px;
   font-weight: 700;
 
   /*   .heading__title {
@@ -112,19 +126,6 @@ input[type="text"] {
   content: " ";
   display: block;
   background: #de2424;
-}
-
-.star {
-  /* Star */
-
-  margin-top: 100px;
-  margin-left: 500px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 hr {
