@@ -57,8 +57,11 @@ function submitForm(event) {
   //mostra o valor após envio
   renderBookList();
 }
+function finalizouDelete() {
+  console.log("Delete finalizado");
+}
 
-function deleteBook(id) {
+function deleteBook(id, callback) {
   console.log("antes do filtro", list);
   list = list.filter((value) => {
     if (value.id == id) {
@@ -69,6 +72,7 @@ function deleteBook(id) {
   console.log("depois do filtro", list);
 
   renderBookList();
+  callback();
 }
 
 function renderBookList() {
@@ -86,7 +90,7 @@ function renderBookList() {
     listDiv.innerHTML +=
       "<button type='button' class='delete' onclick='deleteBook(\"" +
       currentBook.id +
-      "\")'>Delete</button>";
+      "\", finalizouDelete)'>Delete</button>";
 
     listDiv.innerHTML += "<hr/>";
   }
