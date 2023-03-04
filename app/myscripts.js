@@ -85,15 +85,24 @@ function renderBookList() {
   for (let index = 0; index < tamanhoLista; index++) {
     const currentBook = list[index];
 
-    listDiv.append(currentBook.anunciarTitulo());
+    let itemString = "";
 
-    listDiv.innerHTML +=
+    itemString += "<div class=\"list-item\">";
+
+    itemString += currentBook.anunciarTitulo();
+
+    itemString +=
       "<button type='button' class='delete' onclick='deleteBook(\"" +
       currentBook.id +
       "\", finalizouDelete)'>Delete</button>";
 
-    listDiv.innerHTML += "<hr/>";
+    itemString += "</div>";
+
+    itemString += "<hr/>";
+
+    listDiv.innerHTML += itemString;
   }
+
   const livrosNaoLidos = list.filter((currentLivro) => {
     return currentLivro.read == "no read";
   });

@@ -85,27 +85,29 @@ input[type="text"] {
   margin-top: 15px;
   margin-bottom: 20px;
   font-weight: 700;
+}
 
-  /*   .heading__title {
-    transform: rotate(2deg);
-    padding: 0.2rem 1.2rem;
-    border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
-    background-color: hsla(166, 100%, 50%, 0.7);
-    font-size: 1.5rem;
-  } */
+.send:hover {
+  background: #ff0000;
 }
 
 .delete {
-font-size: 15px;
-font-weight: 600;
-border: none;
-border-radius: 15% 10% 9% 12%;
-background-color: #de2424;
-color: #ffffff;
-padding: 1px 3px;
-margin: 15px 10px;
-margin-left: 50px;
-align-items: flex-end;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 15% 10% 9% 12%;
+  background-color: #de2424;
+  color: #ffffff;
+  padding: 1px 5px;
+}
+
+.delete:hover {
+  background: #ff0000;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
 }
 
 .read {
